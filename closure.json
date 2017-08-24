@@ -1,0 +1,25 @@
+{
+  "lib": [
+    "src/**/*.js"
+  ],
+  "compile": {
+    "closure_entry_point": "tse",
+    "externs": [
+
+    ],
+    "define": [
+      "ol.ENABLE_WEBGL=false"
+    ],
+    "js": [
+        
+    ],
+    "extra_annotation_name": [
+
+    ],
+    "rewrite_polyfills": "false",
+    "compilation_level": "ADVANCED",
+    "warning_level": "VERBOSE",
+    "output_wrapper": "(function(){%output%})();",
+    "use_types_for_optimization": true
+  }
+}
