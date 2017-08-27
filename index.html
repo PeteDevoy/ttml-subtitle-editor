@@ -60,6 +60,8 @@
 
   body {
       font-family: sans-serif;
+      background: #001;
+      color:#FFE;
   }
 </style>
 
@@ -76,6 +78,14 @@
 
     .tse-tape {
         white-space: nowrap;
+    }
+
+    .tse-tape p {
+        background:#f0f;
+        border-radius:3px;
+        padding:0;
+        margin:0 .2em   ;
+        display: inline-block;
     }
 
     .tse-tape span {
@@ -100,14 +110,14 @@
             0deg,
             transparent,
             transparent 3px,
-            #000 3px,
-            #000 6px
+            #FFF 3px,
+            #FFF 6px
         );
         background-size:1px 6px;
         -webkit-background-size:1px 7px; /* override value for shitty webkit */
         background-position:center;
         background-repeat:repeat-y;
-        opacity:0.5;
+        opacity:1;
         cursor: default;
 
     }
