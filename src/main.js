@@ -13,7 +13,7 @@ var tape = new tse.WordTape({
     target: 'tape'
 });
 
-<!--
+/*
 var el = document.getElementById('s1');
 var s = new goog.ui.TwoThumbSlider;
 s.decorate(el);
@@ -21,4 +21,4 @@ s.addEventListener(goog.ui.Component.EventType.CHANGE, function() {
   document.getElementById('out1').innerHTML = 'start: ' + s.getValue() +
     ' end: ' + (s.getValue() + s.getExtent());
 });
--->
+*/
