@@ -1,0 +1,16 @@
+.tse-tapeSpool {
+    overflow-x: scroll;
+    background:rgba(0,0,0,.5);
+}
+
+.tse-tape {
+    white-space: nowrap;
+}
+
+.tse-tape p {
+    background:#ff00cc;
+    border-radius:3px;
+    padding:.5em .25em;
+    margin:.25em .1em;
+    display: inline-block;
+}

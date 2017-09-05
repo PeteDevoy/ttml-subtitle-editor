@@ -24,6 +24,9 @@ tse.WordTape.prototype.cut = function (selection) {
     clickedParagraph.parentNode.insertBefore(dividend, clickedParagraph);
 };
 
+/**
+ *
+ */
 tse.WordTape.prototype.glue = function (selection) {
     var s = selection;
     var isReverse = s.anchorNode !== s.getRangeAt(0).startContainer;
@@ -44,20 +47,17 @@ tse.WordTape.prototype.glue = function (selection) {
         text += current.textContent;
         current.remove();
     }
+
     first.innerHTML = text;
     selection.removeAllRanges();
 };
 
 tse.WordTape.prototype.boundaryClicked = function (e) {
     var selection = window.getSelection();
-    //diagram: https://stackoverflow.com/a/33586253/1860663
     if (selection.isCollapsed) {
         this.cut(selection);
     } else if (selection.anchorNode !== selection.focusNode) {
         this.glue(selection);
-        //console.log(selection.anchorNode.data);
-        //console.log(selection.focusNode.data);
-        //this.glue(selection);
     }
 };
 
@@ -67,7 +67,7 @@ tse.WordTape.prototype.createTape = function () {
     p.innerHTML = this.source.textContent.trim();
 
     this.spoolDiv = document.createElement('div');
-    this.spoolDiv.className = 'tse-spool';
+    this.spoolDiv.className = 'tse-tapeSpool';
 
     this.tapeDiv = document.createElement('div');
     this.tapeDiv.className = 'tse-tape';
@@ -75,7 +75,6 @@ tse.WordTape.prototype.createTape = function () {
     this.spoolDiv.appendChild(this.tapeDiv);
     this.tapeDiv.appendChild(p);
     this.target.appendChild(this.spoolDiv);
-    //this.createTape();
 
     goog.events.listen(this.tapeDiv, goog.events.EventType.CLICK, this.boundaryClicked, false, this);
 };

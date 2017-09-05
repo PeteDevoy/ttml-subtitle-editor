@@ -1,0 +1,13 @@
+body {
+    margin:0;
+    padding:0;
+    background-image:
+    -webkit-gradient(linear, 0 100%, 100% 0, color-stop(.25, #eee), color-stop(.25, transparent)),
+    -webkit-gradient(linear, 0 0, 100% 100%, color-stop(.25, #eee), color-stop(.25, transparent)),
+    -webkit-gradient(linear, 0 100%, 100% 0, color-stop(.75, transparent), color-stop(.75, #eee)),
+    -webkit-gradient(linear, 0 0, 100% 100%, color-stop(.75, transparent), color-stop(.75, #eee));
+    background-size:10px 10px;
+    -webkit-background-size:10px 10.1px; /* override value for shitty webkit */
+    background-position:0 0, 5px 0, 5px -5px, 0px 5px;
+    font-family: sans-serif;
+}
